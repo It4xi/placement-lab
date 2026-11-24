@@ -1,0 +1,239 @@
+{
+  "dataset_type": "synthetic",
+  "seed": 27609,
+  "training_seed": 27610,
+  "holdout_seed": 27612,
+  "total_rows": 18000,
+  "train_rows": 12000,
+  "test_rows": 6000,
+  "positive_rate": 0.5342222222222223,
+  "selected_model": "Logistic Regression",
+  "selection_rule": "highest mean 5-fold training CV F1",
+  "diagnostics": {
+    "training_prior": 0.5378333333333334,
+    "baseline_accuracy": 0.527,
+    "baseline_brier": 0.2493883611111111,
+    "brier": 0.17444686373926538,
+    "calibration": [
+      {
+        "band": "0-20%",
+        "students": 802,
+        "mean_score": 0.12103248674747914,
+        "observed_rate": 0.11221945137157108
+      },
+      {
+        "band": "20-40%",
+        "students": 1139,
+        "mean_score": 0.3024766885744164,
+        "observed_rate": 0.2607550482879719
+      },
+      {
+        "band": "40-60%",
+        "students": 1282,
+        "mean_score": 0.5023949256099813,
+        "observed_rate": 0.46177847113884557
+      },
+      {
+        "band": "60-80%",
+        "students": 1473,
+        "mean_score": 0.700349449236976,
+        "observed_rate": 0.6883910386965377
+      },
+      {
+        "band": "80-100%",
+        "students": 1304,
+        "mean_score": 0.8833680644446583,
+        "observed_rate": 0.8964723926380368
+      }
+    ],
+    "thresholds": [
+      {
+        "cutoff": 10,
+        "tn": 262,
+        "fp": 2576,
+        "fn": 16,
+        "tp": 3146
+      },
+      {
+        "cutoff": 15,
+        "tn": 493,
+        "fp": 2345,
+        "fn": 42,
+        "tp": 3120
+      },
+      {
+        "cutoff": 20,
+        "tn": 712,
+        "fp": 2126,
+        "fn": 90,
+        "tp": 3072
+      },
+      {
+        "cutoff": 25,
+        "tn": 926,
+        "fp": 1912,
+        "fn": 145,
+        "tp": 3017
+      },
+      {
+        "cutoff": 30,
+        "tn": 1143,
+        "fp": 1695,
+        "fn": 221,
+        "tp": 2941
+      },
+      {
+        "cutoff": 35,
+        "tn": 1335,
+        "fp": 1503,
+        "fn": 296,
+        "tp": 2866
+      },
+      {
+        "cutoff": 40,
+        "tn": 1554,
+        "fp": 1284,
+        "fn": 387,
+        "tp": 2775
+      },
+      {
+        "cutoff": 45,
+        "tn": 1737,
+        "fp": 1101,
+        "fn": 517,
+        "tp": 2645
+      },
+      {
+        "cutoff": 50,
+        "tn": 1906,
+        "fp": 932,
+        "fn": 649,
+        "tp": 2513
+      },
+      {
+        "cutoff": 55,
+        "tn": 2076,
+        "fp": 762,
+        "fn": 807,
+        "tp": 2355
+      },
+      {
+        "cutoff": 60,
+        "tn": 2244,
+        "fp": 594,
+        "fn": 979,
+        "tp": 2183
+      },
+      {
+        "cutoff": 65,
+        "tn": 2384,
+        "fp": 454,
+        "fn": 1202,
+        "tp": 1960
+      },
+      {
+        "cutoff": 70,
+        "tn": 2522,
+        "fp": 316,
+        "fn": 1432,
+        "tp": 1730
+      },
+      {
+        "cutoff": 75,
+        "tn": 2618,
+        "fp": 220,
+        "fn": 1712,
+        "tp": 1450
+      },
+      {
+        "cutoff": 80,
+        "tn": 2703,
+        "fp": 135,
+        "fn": 1993,
+        "tp": 1169
+      },
+      {
+        "cutoff": 85,
+        "tn": 2760,
+        "fp": 78,
+        "fn": 2342,
+        "tp": 820
+      },
+      {
+        "cutoff": 90,
+        "tn": 2806,
+        "fp": 32,
+        "fn": 2698,
+        "tp": 464
+      },
+      {
+        "cutoff": 95,
+        "tn": 2834,
+        "fp": 4,
+        "fn": 2995,
+        "tp": 167
+      }
+    ]
+  },
+  "training_size_comparison": {
+    "earlier_accuracy": 0.7353333333333333,
+    "expanded_accuracy": 0.7365,
+    "accuracy_gain_ci95": [
+      -0.0038374999999999998,
+      0.006166666666666667
+    ],
+    "earlier_brier": 0.17642040788739488,
+    "expanded_brier": 0.17444686373926538,
+    "brier_reduction_ci95": [
+      0.0010358718683778744,
+      0.002931470114912411
+    ],
+    "bootstrap_repeats": 1000,
+    "earlier_train_rows": 1200,
+    "expanded_train_rows": 12000
+  },
+  "models": {
+    "Logistic Regression": {
+      "cv_f1_mean": 0.7497288471719407,
+      "cv_f1_std": 0.0015517394198464613,
+      "test": {
+        "accuracy": 0.7365,
+        "precision": 0.7294629898403483,
+        "recall": 0.7947501581277673,
+        "f1": 0.760708339639776,
+        "roc_auc": 0.8182948143452975,
+        "confusion_matrix": [
+          [
+            1906,
+            932
+          ],
+          [
+            649,
+            2513
+          ]
+        ]
+      }
+    },
+    "Random Forest": {
+      "cv_f1_mean": 0.7452919610238384,
+      "cv_f1_std": 0.0032423082732460935,
+      "test": {
+        "accuracy": 0.727,
+        "precision": 0.7233294255568582,
+        "recall": 0.7805186590765338,
+        "f1": 0.7508366291451172,
+        "roc_auc": 0.8057929143604974,
+        "confusion_matrix": [
+          [
+            1894,
+            944
+          ],
+          [
+            694,
+            2468
+          ]
+        ]
+      }
+    }
+  }
+}
